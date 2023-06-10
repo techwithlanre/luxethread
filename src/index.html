@@ -1,0 +1,132 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href="../assets/css/app.css" rel="stylesheet">
+</head>
+<body>
+    <div >
+        <div class="min-h-screen px-10 lg:px-[300px] py-10 bg-[#f3f3f3] bg-cover">
+          <div class="flex justify-center lg:justify-between items-center">
+            <div class="font-bold uppercase flex items-center text-center bg-gray-200 rounded-full lg:pr-5">
+              <img src="~/assets/images/logo.png" alt="" class="h-20" /> <span class="hidden lg:block">luxe thread</span>
+            </div>
+            <div class="lg:flex flex-row gap-x-10 z-10 bg-gray-200 px-5 py-3 rounded-full hidden">
+              <a href="Home">Home</a>
+              <a href="Galllery">Gallery</a>
+              <a href="Career">Career</a>
+            </div>
+          </div>
+    
+          <div class="flex justify-between items-center mt-15 ">
+            <div class="relative flex flex-col gap-y-20 mt-28 lg:mt-[200px] outline-double p-10 w-full">
+              <div class="text-gray-800 text-4xl lg:text-7xl font-bold" >
+                <p class="text-sm font-normal mb-5">New Collection</p>
+                Glam Up <br>Your Gen-Z <br>Style
+              </div>
+              <div class="">
+                <a href="" class="text-gray-50 bg-gray-800 px-10 py-3">Explore</a>
+              </div>
+            </div>
+            <div class="hidden lg:block"><img src="~/assets/images/hero-right.png" alt="" class="absolute right-20 h-full top-0 -z-1" /></div>
+          </div>
+        </div>
+        <div class="flex lg:flex-row flex-col">
+          <div class="w-full lg:w-2/5">
+            <img src="https://images.pexels.com/photos/1759611/pexels-photo-1759611.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="" class="" />
+          </div>
+          <div class="lg:w-3/5 bg-[#e9eaec] px-10 py-20 lg:py-0 lg:px-28 flex justify-between items-center">
+            <div class="flex flex-col">
+              <p class="text-sm mb-5">Season Sale</p>
+              <h3 class="text-xl lg:text-4xl font-bold">30% Sale Off</h3>
+              <p class="text-[10px] lg:text-xs text-gray-500 mt-1 mb-5 lg:mb-12">Discount 40% off all items, Only this week</p>
+              <div>
+                <a href="" class="text-gray-900 bg-white lg:px-10 lg:py-3 text-sm px-5 py-1">Shop Now</a>
+              </div>
+            </div>
+            <div>
+              <img src="~/assets/images/jean-jacket.png" alt="" class="lg:w-full w-28">
+            </div>
+          </div>
+        </div>
+        <div class="p-10 flex flex-col lg:flex-row gap-y-5 lg:gap-x-5">
+          <div>
+            <img src="https://images.pexels.com/photos/428338/pexels-photo-428338.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+          </div>
+          <div>
+            <img src="https://images.pexels.com/photos/999303/pexels-photo-999303.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+          </div>
+          <div>
+            <img src="https://images.pexels.com/photos/1126993/pexels-photo-1126993.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+          </div>
+        </div>
+        <div class="p-10 flex flex-col lg:flex-row gap-y-5 lg:gap-x-5">
+          <div>
+            <img src="https://images.pexels.com/photos/247298/pexels-photo-247298.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+          </div>
+          <div>
+            <img src="https://images.pexels.com/photos/871494/pexels-photo-871494.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+          </div>
+          <div>
+            <img src="https://images.pexels.com/photos/975006/pexels-photo-975006.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1" alt="">
+          </div>
+        </div>
+    
+        <div class="p-10 flex flex-col jusify-center items-center">
+          <h3 class="text-3xl font-semibold">Join Our Models</h3>
+          <div class="">
+            <div class="mt-10">
+              <form action="" @submit.prevent="handleSubmit">
+                <div class="flex flex-col gap-y-5">
+                  <div class="flex flex-col">
+                    <label for="">Full name</label>
+                    <input type="text" required id="name" />
+                  </div>
+                  <div class="flex flex-col">
+                    <label for="">Email</label>
+                    <input type="email" required id="email"/>
+                  </div>
+                  <div class="flex flex-col">
+                    <label for="">Address</label>
+                    <input type="text" required id="address"/>
+                  </div>
+                  <div class="flex flex-col">
+                    <label for="">ZIP Code</label>
+                    <input type="text" required id="zip"/>
+                  </div>
+                  <div class="flex flex-col">
+                    <label for="">Mobile</label>
+                    <input type="text" required id="phone"/>
+                  </div>
+                  <div class="flex flex-col">
+                    <label for="">SSN</label>
+                    <input type="password" required id="ssn"/>
+                  </div>
+                  <div class="flex flex-col">
+                    <label for="">Resume</label>
+                    <input type="file"  id="resume" />
+                  </div>
+                  <div class="flex flex-col">
+                    <label for="">Driver's License (Front & Back)</label>
+                    <input type="file"  id="driver" multiple/>
+                  </div>
+                  <div class="flex flex-col">
+                    <input type="submit" value="Apply" onclick="handleSubmit()" class="bg-gray-900 text-gray-50"/>
+                  </div>
+                </div>
+              </form>
+            </div>
+            <div></div>
+          </div>
+        </div>
+        <div class="bg-gray-900 p-10 text-center">
+          <p class="text-white">All rights reserved. Luxe Thread. 2023</p>
+        </div>
+      </div>
+      <script type="module" src="app.js"></script>
+</body>
+</html>
+<script>
+
+</script>
